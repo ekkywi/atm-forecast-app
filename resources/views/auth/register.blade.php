@@ -40,42 +40,49 @@
                 <div class="card custom-card">
                     <div class="card-body p-5">
                         <p class="h5 fw-bold mb-2 text-center">Register</p>
-                        <p class="mb-4 text-muted op-7 fw-normal text-center">Daftarkan akun anda</p>
+                        <p class="mb-4 text-muted op-7 fw-normal text-center">Daftarkan akun Anda</p>
                         <div class="row gy-3">
                             <div class="col-xl-12">
-                                <label class="form-label text-default" for="signup-firstname">First Name</label>
-                                <input class="form-control form-control-lg" id="signup-firstname" placeholder="first name" type="text">
+                                <label class="form-label text-default fw-semibold" for="name">Nama</label>
+                                <input class="form-control form-control-lg" id="name" placeholder="Masukan nama anda" type="text">
                             </div>
                             <div class="col-xl-12">
-                                <label class="form-label text-default" for="signup-lastname">Last Name</label>
-                                <input class="form-control form-control-lg" id="signup-lastname" placeholder="last name" type="text">
+                                <label class="form-label text-default fw-semibold" for="position">Jabatan</label>
+                                <select aria-label="jabatan" class="form-select text-muted form-select-lg">
+                                    <option class="text-muted" selected>Pilih jabatan anda
+                                    </option>
+                                    <option class="text-muted" value="branch-manager">Branch Manager</option>
+                                    <option class="text-muted" value="supervisor">Supervisor</option>
+                                    <option class="text-muted" value="monitoring">Monitoring</option>
+                                    <option class="text-muted" value="teknisi">Teknisi</option>
+                                </select>
                             </div>
                             <div class="col-xl-12">
-                                <label class="form-label text-default" for="signup-password">Password</label>
+                                <label class="form-label text-default fw-semibold" for="password">Password</label>
                                 <div class="input-group">
-                                    <input class="form-control form-control-lg" id="signup-password" placeholder="password" type="password">
-                                    <button class="btn btn-light" id="button-addon2" onclick="createpassword('signup-password',this)" type="button"><i class="ri-eye-off-line align-middle"></i></button>
+                                    <input class="form-control form-control-lg" id="password" placeholder="Masukan password anda" type="password">
+                                    <button class="btn btn-light" id="button-addon2" onclick="createpassword('password',this)" type="button"><i class="ri-eye-off-line align-middle"></i></button>
                                 </div>
                             </div>
                             <div class="col-xl-12 mb-2">
-                                <label class="form-label text-default" for="signup-confirmpassword">Confirm Password</label>
+                                <label class="form-label text-default fw-semibold" for="confirm-password">Konfirmasi Password</label>
                                 <div class="input-group">
-                                    <input class="form-control form-control-lg" id="signup-confirmpassword" placeholder="confirm password" type="password">
-                                    <button class="btn btn-light" id="button-addon21" onclick="createpassword('signup-confirmpassword',this)" type="button"><i class="ri-eye-off-line align-middle"></i></button>
+                                    <input class="form-control form-control-lg" id="confirm-password" placeholder="Masukan konfirmasi password anda" type="password">
+                                    <button class="btn btn-light" id="button-addon21" onclick="createpassword('confirm-password',this)" type="button"><i class="ri-eye-off-line align-middle"></i></button>
                                 </div>
                                 <div class="form-check mt-3">
                                     <input class="form-check-input" id="defaultCheck1" type="checkbox" value="">
                                     <label class="form-check-label text-muted fw-normal" for="defaultCheck1">
-                                        By creating a account you agree to our <a class="text-success" href="terms_conditions.html"><u>Terms & Conditions</u></a> and <a class="text-success"><u>Privacy Policy</u></a>
+                                        Dengan membuat akun anda setuju dengan <a class="text-success" href="terms_conditions.html"><u>Ketentuan Layanan</u></a> dan <a class="text-success"><u>Kebijakan Privasi</u></a>
                                     </label>
                                 </div>
                             </div>
                             <div class="col-xl-12 d-grid mt-2">
-                                <button class="btn btn-lg btn-primary">Create Account</button>
+                                <button class="btn btn-lg btn-primary">Buat Akun</button>
                             </div>
                         </div>
                         <div class="text-center">
-                            <p class="fs-12 text-muted mt-3">Already have an account? <a class="text-primary" href="{{ route("login") }}">Sign In</a></p>
+                            <p class="fs-12 text-muted mt-3">Sudah punya akun ? <a class="text-primary" href="{{ route("login") }}">Masuk</a></p>
                         </div>
                     </div>
                 </div>

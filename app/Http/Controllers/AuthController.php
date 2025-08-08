@@ -15,4 +15,14 @@ class AuthController extends Controller
     {
         return view('auth.register');
     }
+
+    public function activate()
+    {
+        return view('auth.activate');
+    }
+
+    public function app()
+    {
+        return view('layouts.app');
+    }
 }
