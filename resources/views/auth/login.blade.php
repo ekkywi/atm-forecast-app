@@ -34,8 +34,7 @@
             <div class="col-xxl-4 col-xl-5 col-lg-5 col-md-6 col-sm-8 col-12">
                 <div class="my-5 d-flex justify-content-center">
                     <a href="index.html">
-                        <img alt="logo" class="desktop-logo" src="{{ asset("images/brand-logos/desktop-logo.png") }}">
-                        <img alt="logo" class="desktop-dark" src="{{ asset("images/brand-logos/desktop-dark.png") }}">
+                        <img alt="logo" class="desktop-logo" src="{{ asset("images/brand-logos/logo.png") }}">
                     </a>
                 </div>
                 <div class="card custom-card">
@@ -67,7 +66,7 @@
                             </div>
                         </div>
                         <div class="text-center">
-                            <p class="fs-12 text-muted mt-3">Tidak punya akun? <a class="text-primary" href="sign-up-basic.html">Daftar</a></p>
+                            <p class="fs-12 text-muted mt-3">Tidak punya akun? <a class="text-primary" href="{{ route("register") }}">Daftar</a></p>
                         </div>
                     </div>
                 </div>
