@@ -39,35 +39,27 @@
                 </div>
                 <div class="card custom-card">
                     <div class="card-body p-5">
-                        <p class="h5 fw-bold mb-2 text-center">Log In</p>
-                        <p class="mb-4 text-muted op-7 fw-normal text-center">Selamat datang kembali !</p>
+                        <p class="h5 fw-bold mb-2 text-center">Aktivasi Akun</p>
+                        <p class="mb-4 text-muted op-7 fw-normal text-center">Silakan masukkan username dan token untuk mengaktifkan akun Anda.</p>
                         <div class="row gy-3">
                             <div class="col-xl-12">
                                 <label class="form-label text-default fw-semibold" for="username">Username</label>
                                 <input class="form-control form-control-lg" id="username" placeholder="username" type="text">
                             </div>
                             <div class="col-xl-12 mb-2">
-                                <label class="form-label text-default d-block fw-semibold" for="password">Password<a class="float-end text-danger" href="{{ route("forgot-password") }}">Lupa password ?</a></label>
+                                <label class="form-label text-default d-block fw-semibold" for="token">Token</label>
                                 <div class="input-group">
-                                    <input class="form-control form-control-lg" id="password" placeholder="********" type="password">
-                                    <button class="btn btn-light" id="button-addon2" onclick="createpassword('password',this)" type="button"><i class="ri-eye-off-line align-middle"></i></button>
-                                </div>
-                                <div class="mt-2">
-                                    <div class="form-check">
-                                        <input class="form-check-input" id="defaultCheck1" type="checkbox" value="">
-                                        <label class="form-check-label text-muted fw-normal" for="defaultCheck1">
-                                            Ingat saya
-                                        </label>
-                                    </div>
+                                    <input class="form-control form-control-lg" id="token" placeholder="********" type="text">
+                                    <button class="btn btn-light" id="button-addon2" onclick="createpassword('token',this)" type="button"><i class="ri-eye-off-line align-middle"></i></button>
                                 </div>
                             </div>
                             <div class="col-xl-12 d-grid mt-2">
-                                <a class="btn btn-lg btn-primary" href="index.html">Masuk</a>
+                                <a class="btn btn-lg btn-primary" href="index.html">Aktivasi</a>
                             </div>
                         </div>
                         <div class="text-center">
                             <p class="fs-12 text-muted mt-3">Tidak punya akun? <a class="text-primary" href="{{ route("register") }}">Daftar</a></p>
-                            <p class="fs-12 text-muted mt-3">Akun anda belum aktif? <a class="text-primary" href="{{ route("activation") }}">Aktivasi Akun</a></p>
+                            <p class="fs-12 text-muted mt-3">Sudah punya akun ? <a class="text-primary" href="{{ route("login") }}">Masuk</a></p>
                         </div>
                     </div>
                 </div>

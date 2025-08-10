@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta content='width=device-width, initial-scale=1.0, user-scalable=no' name='viewport'>
     <meta content="IE=edge" http-equiv="X-UA-Compatible">
-    <title> YNEX - Bootstrap 5 Premium Admin & Dashboard Template </title>
+    <title>@yield("title")</title>
     @include("library.commoncss")
 </head>
 

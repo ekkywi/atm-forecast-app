@@ -26,9 +26,17 @@
 
                 <li class="slide__category"><span class="category-name">Menu Utama</span></li>
                 <li class="slide">
-                    <a class="side-menu__item" href="#">
+                    <a class="side-menu__item {{ request()->routeIs("dashboard") ? "active" : "" }}" href="{{ route("dashboard") }}">
                         <i class="bx bx-home side-menu__icon"></i>
                         <span class="side-menu__label">Dashboards</span>
+                    </a>
+                </li>
+
+                <li class="slide__category"><span class="category-name">Monitoring</span></li>
+                <li class="slide">
+                    <a class="side-menu__item" href="#">
+                        <i class="bx bx-money side-menu__icon"></i>
+                        <span class="side-menu__label">Kas</span>
                     </a>
                 </li>
 
@@ -46,6 +54,9 @@
                         <li class="slide">
                             <a class="side-menu__item" href="#">Data Pengguna</a>
                         </li>
+                        <li "slide" class>
+                            <a class="side-menu__item" href=#>Aktivasi Akun</a>
+                        </li>
                         <li class="slide">
                             <a class="side-menu__item" href="#">Token</a>
                         </li>
@@ -61,15 +72,43 @@
                         <li class="slide side-menu__label1">
                             <a href="javascript:void(0)">Master Data</a>
                         </li>
-                        <li class="slide">
-                            <a class="side-menu__item" href="#">ATM</a>
+                        <li class="slide has-sub">
+                            <a class="side-menu__item" href="javascript:void(0);">Hardware
+                                <i class="fe fe-chevron-right side-menu__angle"></i>
+                            </a>
+                            <ul class="slide-menu child2">
+                                <li class="slide">
+                                    <a class="side-menu__item" href="#">Perangkat Utama</a>
+                                </li>
+                                <li class="slide">
+                                    <a class="side-menu__item" href="#">Komponen Internal</a>
+                                </li>
+                                <li class="slide">
+                                    <a class="side-menu__item" href="#">Aksesori dan Perlengkapan</a>
+                                </li>
+                                <li class="slide">
+                                    <a class="side-menu__item" href="#">Perlengkapan Jaringan</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="slide has-sub">
+                            <a class="side-menu__item" href="javascript:void(0);">Software
+                                <i class="fe fe-chevron-right side-menu__angle"></i>
+                            </a>
+                            <ul class="slide-menu child2">
+                                <li class="slide">
+                                    <a class="side-menu__item" href="#">Lisensi</a>
+                                </li>
+                                <li class="slide">
+                                    <a class="side-menu__item" href="#">SSL</a>
+                                </li>
+                            </ul>
                         </li>
                         <li class="slide">
                             <a class="side-menu__item" href="#">Cluster</a>
                         </li>
                     </ul>
                 </li>
-
             </ul>
             <div class="slide-right" id="slide-right"><svg fill="#7b8191" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
                     <path d="M10.707 17.707 16.414 12l-5.707-5.707-1.414 1.414L13.586 12l-4.293 4.293z"></path>
