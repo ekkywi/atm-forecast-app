@@ -81,6 +81,27 @@
     <!-- Show Password JS -->
     <script src="{{ asset("js/show-password.js") }}"></script>
 
+    <script src="{{ asset("libs/sweetalert2/sweetalert2.all.min.js") }}"></script>
+
+    @if (session("success"))
+        <script>
+            Swal.fire({
+                icon: 'success',
+                title: 'Berhasil!',
+                text: '{{ session("success") }}',
+            });
+        </script>
+    @endif
+    @if (session("error"))
+        <script>
+            Swal.fire({
+                icon: 'error',
+                title: 'Gagal!',
+                text: '{{ session("error") }}',
+            });
+        </script>
+    @endif
+
 </body>
 
 </html>

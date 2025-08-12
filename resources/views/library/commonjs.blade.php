@@ -30,3 +30,4 @@
  <script src="{{ asset("libs/pdfmake/vfs_fonts.js") }}"></script>
  <script src="{{ asset("libs/datatables/js/buttons.html5.min.js") }}"></script>
  <script src="{{ asset("libs/jszip/jszip.min.js") }}"></script>
+ <script src='{{ asset("libs/sweetalert2/sweetalert2.all.min.js") }}'></script>

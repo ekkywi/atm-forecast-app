@@ -14,3 +14,4 @@
 <link href="{{ asset("libs/datatables/css/dataTables.bootstrap5.min.css") }}" rel="stylesheet">
 <link href="{{ asset("libs/datatables/css/responsive.bootstrap.min.css") }}" rel="stylesheet">
 <link href="{{ asset("libs/datatables/css/buttons.bootstrap5.min.js") }}" rel="stylesheet">
+<link href="{{ asset("libs/sweetalert2/sweetalert2.min.css") }}" rel="stylesheet">
