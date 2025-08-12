@@ -49,6 +49,10 @@
                                     <input class="form-control form-control-lg" id="name" name="name" placeholder="Masukan nama anda" required type="text">
                                 </div>
                                 <div class="col-xl-12">
+                                    <label class="form-label text-default fw-semibold" for="username">Username</label>
+                                    <input class="form-control form-control-lg" id="username" name="username" placeholder="Masukan username anda" required type="text">
+                                </div>
+                                <div class="col-xl-12">
                                     <label class="form-label text-default fw-semibold" for="position">Jabatan</label>
                                     <select aria-label="jabatan" class="form-select text-muted form-select-lg" id="position" name="position" required>
                                         <option class="text-muted" disabled selected value="">Pilih jabatan anda</option>
@@ -116,6 +120,16 @@
                 icon: 'error',
                 title: 'Gagal!',
                 text: '{{ session("error") }}',
+            });
+        </script>
+    @endif
+    @if ($errors->any())
+        <script>
+            Swal.fire({
+                icon: 'error',
+                title: 'Gagal!',
+                html: `{!! implode("<br>", $errors->all()) !!}`,
+                confirmButtonText: 'OK'
             });
         </script>
     @endif

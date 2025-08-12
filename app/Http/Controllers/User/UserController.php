@@ -14,6 +14,7 @@ class UserController extends Controller
     {
         $request->validate([
             'name' => ['required', 'string', 'max:255'],
+            'username' => ['required', 'string', 'max:255', 'unique:users'],
             'position' => ['required', 'string'],
             'password' => ['required', 'string', 'min:10', 'confirmed'],
             'token' => ['nullable', 'string', 'max:15'],
@@ -22,6 +23,7 @@ class UserController extends Controller
 
         $user = User::create([
             'name' => $request->name,
+            'username' => $request->username,
             'position' => $request->position,
             'password' => $request->password,
             'token' => Str::random(15),
