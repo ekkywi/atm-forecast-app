@@ -3,7 +3,7 @@
 
     <!-- Start::main-sidebar-header -->
     <div class="main-sidebar-header">
-        <a class="header-logo" href="index.html">
+        <a class="header-logo" href="{{ route("dashboard") }}">
             <img alt="logo" class="desktop-logo" src="{{ asset("images/brand-logos/logo-white.png") }}">
             <img alt="logo" class="toggle-logo" src="{{ asset("images/brand-logos/icon-white.png") }}">
             <img alt="logo" class="desktop-dark" src="{{ asset("images/brand-logos/logo-dark.png") }}">
@@ -44,7 +44,31 @@
                             <a class="side-menu__item" href="#">Saldo Kas</a>
                         </li>
                         <li class="slide">
+                            <a class="side-menu__item" href="#">Saldo ATM-CRM</a>
+                        </li>
+                        <li class="slide">
                             <a class="side-menu__item" href="#">Tambahan Kas</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="slide has-sub">
+                    <a class="side-menu__item" href="javascript:void(0);">
+                        <i class="bx bx-network-chart side-menu__icon"></i>
+                        <span class="side-menu__label">E-Channel</span>
+                        <i class="fe fe-chevron-right side-menu__angle"></i>
+                    </a>
+                    <ul class="slide-menu child1">
+                        <li class="slide">
+                            <a class="side-menu__item" href="#">Problem Perangkat</a>
+                        </li>
+                        <li class="slide">
+                            <a class="side-menu__item" href="#">Cash Low</a>
+                        </li>
+                        <li class="slide">
+                            <a class="side-menu__item" href="#">Cash Out</a>
+                        </li>
+                        <li class="slide">
+                            <a class="side-menu__item" href="#">Cassette Fatal</a>
                         </li>
                     </ul>
                 </li>
