@@ -18,3 +18,15 @@
  <script src="{{ asset("js/crm-dashboard.js") }}"></script>
  <script src="{{ asset("js/custom-switcher.min.js") }}"></script>
  <script src="{{ asset("js/custom.js") }}"></script>
+ <script src="{{ asset("js/datatables.js") }}"></script>
+ <script src="{{ asset("js/custom.js") }}"></script>
+ <script src="{{ asset("libs/jquery/jquery-3.6.1.min.js") }}"></script>
+ <script src="{{ asset("libs/datatables/js/jquery.dataTables.min.js") }}"></script>
+ <script src="{{ asset("libs/datatables/js/dataTables.bootstrap5.min.js") }}"></script>
+ <script src="{{ asset("libs/datatables/js/dataTables.responsive.min.js") }}"></script>
+ <script src="{{ asset("libs/datatables/js/dataTables.buttons.min.js") }}"></script>
+ <script src="{{ asset("libs/datatables/js/buttons.print.min.js") }}"></script>
+ <script src="{{ asset("libs/pdfmake/pdfmake.min.js") }}"></script>
+ <script src="{{ asset("libs/pdfmake/vfs_fonts.js") }}"></script>
+ <script src="{{ asset("libs/datatables/js/buttons.html5.min.js") }}"></script>
+ <script src="{{ asset("libs/jszip/jszip.min.js") }}"></script>

@@ -62,7 +62,7 @@
                                 </div>
                             </div>
                             <div class="col-xl-12 d-grid mt-2">
-                                <a class="btn btn-lg btn-primary" href="index.html">Masuk</a>
+                                <a class="btn btn-lg btn-primary" href="{{ route("dashboard") }}">Masuk</a>
                             </div>
                         </div>
                         <div class="text-center">

@@ -33,11 +33,20 @@
                 </li>
 
                 <li class="slide__category"><span class="category-name">Monitoring</span></li>
-                <li class="slide">
-                    <a class="side-menu__item" href="#">
+                <li class="slide has-sub">
+                    <a class="side-menu__item" href="javascript:void(0);">
                         <i class="bx bx-money side-menu__icon"></i>
-                        <span class="side-menu__label">Kas</span>
+                        <span class="side-menu__label">Manajemen Kas</span>
+                        <i class="fe fe-chevron-right side-menu__angle"></i>
                     </a>
+                    <ul class="slide-menu child1">
+                        <li class="slide">
+                            <a class="side-menu__item" href="#">Saldo Kas</a>
+                        </li>
+                        <li class="slide">
+                            <a class="side-menu__item" href="#">Tambahan Kas</a>
+                        </li>
+                    </ul>
                 </li>
 
                 <li class="slide__category"><span class="category-name">Management</span></li>
@@ -48,17 +57,29 @@
                         <i class="fe fe-chevron-right side-menu__angle"></i>
                     </a>
                     <ul class="slide-menu child1">
-                        <li class="slide side-menu__label1">
-                            <a href="javascript:void(0)">Pengguna</a>
+                        <li class="slide">
+                            <a class="side-menu__item" href="#">Tambah Pengguna</a>
                         </li>
                         <li class="slide">
                             <a class="side-menu__item" href="#">Data Pengguna</a>
                         </li>
-                        <li "slide" class>
-                            <a class="side-menu__item" href=#>Aktivasi Akun</a>
-                        </li>
                         <li class="slide">
                             <a class="side-menu__item" href="#">Token</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="slide has-sub">
+                    <a class="side-menu__item" href="javascript:void(0);">
+                        <i class="bx bx-group side-menu__icon"></i>
+                        <span class="side-menu__label">Tim On Duty</span>
+                        <i class="fe fe-chevron-right side-menu__angle"></i>
+                    </a>
+                    <ul class="slide-menu child1">
+                        <li class="slide">
+                            <a class="side-menu__item" href="#">Pengaturan Tim</a>
+                        </li>
+                        <li class="slide">
+                            <a class="side-menu__item" href="#">Data Tim</a>
                         </li>
                     </ul>
                 </li>
@@ -69,50 +90,49 @@
                         <i class="fe fe-chevron-right side-menu__angle"></i>
                     </a>
                     <ul class="slide-menu child1">
-                        <li class="slide side-menu__label1">
-                            <a href="javascript:void(0)">Master Data</a>
-                        </li>
                         <li class="slide has-sub">
-                            <a class="side-menu__item" href="javascript:void(0);">Hardware
+                            <a class="side-menu__item" href="javascript:void(0);">ATM
                                 <i class="fe fe-chevron-right side-menu__angle"></i>
                             </a>
                             <ul class="slide-menu child2">
                                 <li class="slide">
-                                    <a class="side-menu__item" href="#">Perangkat Utama</a>
+                                    <a class="side-menu__item" href="#">Tambah Data</a>
                                 </li>
                                 <li class="slide">
-                                    <a class="side-menu__item" href="#">Komponen Internal</a>
-                                </li>
-                                <li class="slide">
-                                    <a class="side-menu__item" href="#">Aksesori dan Perlengkapan</a>
-                                </li>
-                                <li class="slide">
-                                    <a class="side-menu__item" href="#">Perlengkapan Jaringan</a>
+                                    <a class="side-menu__item" href="#">Data ATM</a>
                                 </li>
                             </ul>
                         </li>
                         <li class="slide has-sub">
-                            <a class="side-menu__item" href="javascript:void(0);">Software
+                            <a class="side-menu__item" href="javascript:void(0);">CRM
                                 <i class="fe fe-chevron-right side-menu__angle"></i>
                             </a>
                             <ul class="slide-menu child2">
                                 <li class="slide">
-                                    <a class="side-menu__item" href="#">Lisensi</a>
+                                    <a class="side-menu__item" href="#">Tambah Data</a>
                                 </li>
                                 <li class="slide">
-                                    <a class="side-menu__item" href="#">SSL</a>
+                                    <a class="side-menu__item" href="#">Data CRM</a>
                                 </li>
                             </ul>
                         </li>
-                        <li class="slide">
-                            <a class="side-menu__item" href="#">Cluster</a>
+                        <li class="slide has-sub">
+                            <a class="side-menu__item" href="javascript:void(0);">Cluster
+                                <i class="fe fe-chevron-right side-menu__angle"></i>
+                            </a>
+                            <ul class="slide-menu child2">
+                                <li class="slide">
+                                    <a class="side-menu__item" href="#">Tambah Data</a>
+                                </li>
+                                <li class="slide">
+                                    <a class="side-menu__item" href="#">Data Cluster</a>
+                                </li>
+                            </ul>
                         </li>
                     </ul>
-                </li>
-            </ul>
-            <div class="slide-right" id="slide-right"><svg fill="#7b8191" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M10.707 17.707 16.414 12l-5.707-5.707-1.414 1.414L13.586 12l-4.293 4.293z"></path>
-                </svg></div>
+                    <div class="slide-right" id="slide-right"><svg fill="#7b8191" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10.707 17.707 16.414 12l-5.707-5.707-1.414 1.414L13.586 12l-4.293 4.293z"></path>
+                        </svg></div>
         </nav>
         <!-- End::nav -->
 
