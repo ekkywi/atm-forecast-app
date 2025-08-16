@@ -18,8 +18,10 @@ Route::get('/forgot-password', [AuthController::class, 'showForgotPasswordForm']
 // Form aktivasi
 Route::get('/activation', [AuthController::class, 'showActivationForm'])->name('activation.form');
 
+// Registerasi akun
+Route::post('/register', [AuthController::class, 'register'])->name('register');
 
-
-
+// Login akun
+Route::post('/login', [AuthController::class, 'login'])->name('login');
 
 Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');

@@ -30,7 +30,7 @@
                     <div class="card-body p-5">
                         <p class="h5 fw-bold mb-2 text-center">Register</p>
                         <p class="mb-4 text-muted op-7 fw-normal text-center">Daftarkan akun Anda</p>
-                        <form action="#" method="POST">
+                        <form action="{{ route("register") }}" method="POST">
                             @csrf
                             <div class="row gy-3">
                                 <div class="col-xl-12">

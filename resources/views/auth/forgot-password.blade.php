@@ -3,32 +3,21 @@
 
 <head>
 
-    <!-- Meta Data -->
     <meta charset="UTF-8">
     <meta content='width=device-width, initial-scale=1.0' name='viewport'>
     <meta content="IE=edge" http-equiv="X-UA-Compatible">
     <title> Lupa Password - SmartSupport </title>
 
-    <!-- Favicon -->
     <link href="{{ asset("images/brand-logos/favicon.ico") }}" rel="icon" type="image/x-icon">
-
-    <!-- Main Theme Js -->
     <script src="{{ asset("js/authentication-main.js") }}"></script>
-
-    <!-- Bootstrap Css -->
     <link href="{{ asset("libs/bootstrap/css/bootstrap.min.css") }}" id="style" rel="stylesheet">
-
-    <!-- Style Css -->
     <link href="{{ asset("css/styles.min.css") }}" rel="stylesheet">
-
-    <!-- Icons Css -->
     <link href="{{ asset("css/icons.min.css") }}" rel="stylesheet">
 
 </head>
 
 <body>
 
-    {{-- container --}}
     <div class="container">
         <div class="row justify-content-center align-items-center authentication authentication-basic h-100">
             <div class="col-xxl-4 col-xl-5 col-lg-5 col-md-6 col-sm-8 col-12">
@@ -80,10 +69,7 @@
         </div>
     </div>
 
-    <!-- Bootstrap JS -->
     <script src="{{ asset("libs/bootstrap/js/bootstrap.bundle.min.js") }}"></script>
-
-    <!-- Show Password JS -->
     <script src="{{ asset("js/show-password.js") }}"></script>
 
 </body>

@@ -31,12 +31,6 @@ class User extends Authenticatable
         'password',
     ];
 
-    // mutator untuk atribut password
-    public function setPasswordAttribute($value)
-    {
-        $this->attributes['password'] = Hash::make($value);
-    }
-
     // relasi ke model UserToken
     public function tokens(): HasMany
     {
