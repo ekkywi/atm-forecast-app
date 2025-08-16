@@ -3,32 +3,21 @@
 
 <head>
 
-    <!-- Meta Data -->
     <meta charset="UTF-8">
     <meta content='width=device-width, initial-scale=1.0' name='viewport'>
     <meta content="IE=edge" http-equiv="X-UA-Compatible">
     <title> Register - ATM Forecast</title>
 
-    <!-- Favicon -->
     <link href="{{ asset("images/brand-logos/favicon.ico") }}" rel="icon" type="image/x-icon">
-
-    <!-- Main Theme Js -->
     <script src="{{ asset("js/authentication-main.js") }}"></script>
-
-    <!-- Bootstrap Css -->
     <link href="{{ asset("libs/bootstrap/css/bootstrap.min.css") }}" id="style" rel="stylesheet">
-
-    <!-- Style Css -->
     <link href="{{ asset("css/styles.min.css") }}" rel="stylesheet">
-
-    <!-- Icons Css -->
     <link href="{{ asset("css/icons.min.css") }}" rel="stylesheet">
 
 </head>
 
 <body>
 
-    {{-- container --}}
     <div class="container-lg">
         <div class="row justify-content-center align-items-center authentication authentication-basic h-100">
             <div class="col-xxl-4 col-xl-5 col-lg-5 col-md-6 col-sm-8 col-12">
@@ -41,7 +30,7 @@
                     <div class="card-body p-5">
                         <p class="h5 fw-bold mb-2 text-center">Register</p>
                         <p class="mb-4 text-muted op-7 fw-normal text-center">Daftarkan akun Anda</p>
-                        <form action="{{ route("register") }}" method="POST">
+                        <form action="#" method="POST">
                             @csrf
                             <div class="row gy-3">
                                 <div class="col-xl-12">
@@ -50,7 +39,7 @@
                                 </div>
                                 <div class="col-xl-12">
                                     <label class="form-label text-default fw-semibold" for="username">Username</label>
-                                    <input class="form-control form-control-lg" id="username" name="username" placeholder="Masukan username anda" required type="text">
+                                    <input autocomplete="username" class="form-control form-control-lg" id="username" name="username" placeholder="Masukan username anda" required type="text">
                                 </div>
                                 <div class="col-xl-12">
                                     <label class="form-label text-default fw-semibold" for="position">Jabatan</label>
@@ -66,15 +55,15 @@
                                 <div class="col-xl-12">
                                     <label class="form-label text-default fw-semibold" for="password">Password</label>
                                     <div class="input-group">
-                                        <input class="form-control form-control-lg" id="password" name="password" placeholder="Masukan password anda" required type="password">
-                                        <button class="btn btn-light" id="button-addon2" onclick="createpassword('password',this)" type="button"><i class="ri-eye-off-line align-middle"></i></button>
+                                        <input autocomplete="new-password" class="form-control form-control-lg" id="password" name="password" placeholder="Masukan password anda" required type="password">
+                                        <button class="btn btn-light" id="button-addon-password" onclick="createpassword('password',this)" type="button"><i class="ri-eye-off-line align-middle"></i></button>
                                     </div>
                                 </div>
                                 <div class="col-xl-12 mb-2">
                                     <label class="form-label text-default fw-semibold" for="confirm-password">Konfirmasi Password</label>
                                     <div class="input-group">
-                                        <input class="form-control form-control-lg" id="confirm-password" name="password_confirmation" placeholder="Masukan konfirmasi password anda" required type="password">
-                                        <button class="btn btn-light" id="button-addon21" onclick="createpassword('confirm-password',this)" type="button"><i class="ri-eye-off-line align-middle"></i></button>
+                                        <input autocomplete="new-password" class="form-control form-control-lg" id="confirm-password" name="password_confirmation" placeholder="Masukan konfirmasi password anda" required type="password">
+                                        <button class="btn btn-light" id="button-addon-confirm-password" onclick="createpassword('confirm-password',this)" type="button"><i class="ri-eye-off-line align-middle"></i></button>
                                     </div>
                                     <div class="form-check mt-3">
                                         <input class="form-check-input" id="defaultCheck1" required type="checkbox" value="">
@@ -89,7 +78,7 @@
                             </div>
                         </form>
                         <div class="text-center">
-                            <p class="fs-12 text-muted mt-3">Sudah punya akun ? <a class="text-primary" href="{{ route("login") }}">Masuk</a></p>
+                            <p class="fs-12 text-muted mt-3">Sudah punya akun ? <a class="text-primary" href="{{ route("login.form") }}">Masuk</a></p>
                         </div>
                     </div>
                 </div>
@@ -97,12 +86,8 @@
         </div>
     </div>
 
-    <!-- Bootstrap JS -->
     <script src="{{ asset("libs/bootstrap/js/bootstrap.bundle.min.js") }}"></script>
-
-    <!-- Show Password JS -->
     <script src="{{ asset("js/show-password.js") }}"></script>
-
     <script src="{{ asset("libs/sweetalert2/sweetalert2.all.min.js") }}"></script>
 
     @if (session("success"))

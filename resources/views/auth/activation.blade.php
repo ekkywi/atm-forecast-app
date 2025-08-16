@@ -58,8 +58,8 @@
                             </div>
                         </div>
                         <div class="text-center">
-                            <p class="fs-12 text-muted mt-3">Tidak punya akun? <a class="text-primary" href="{{ route("register") }}">Daftar</a></p>
-                            <p class="fs-12 text-muted mt-3">Sudah punya akun ? <a class="text-primary" href="{{ route("login") }}">Masuk</a></p>
+                            <p class="fs-12 text-muted mt-3">Tidak punya akun? <a class="text-primary" href="{{ route("register.form") }}">Daftar</a></p>
+                            <p class="fs-12 text-muted mt-3">Sudah punya akun ? <a class="text-primary" href="{{ route("login.form") }}">Masuk</a></p>
                         </div>
                     </div>
                 </div>

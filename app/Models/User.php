@@ -2,57 +2,44 @@
 
 namespace App\Models;
 
-// use Illuminate\Contracts\Auth\MustVerifyEmail;
-
-use Illuminate\Database\Eloquent\Concerns\HasUlids;
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Foundation\Auth\User as Authenticatable;
-use Illuminate\Notifications\Notifiable;
 use Illuminate\Database\Eloquent\Concerns\HasUuids;
+use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Support\Facades\Hash;
+
+use App\Models\UserToken;
 
 class User extends Authenticatable
 {
-    /** @use HasFactory<\Database\Factories\UserFactory> */
-    use HasFactory, Notifiable, HasUuids;
+    use HasUuids;
 
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var list<string>
-     */
+    public $incrementing = false;
+    protected $keyType = 'string';
+
+    // atribut yang dapat diisi
     protected $fillable = [
-        'id',
         'name',
         'username',
         'position',
         'password',
-        'token',
-        'is_active',
+        'is_active'
     ];
 
-    /**
-     * The attributes that should be hidden for serialization.
-     *
-     * @var list<string>
-     */
+    // atribut yang disembunyikan
     protected $hidden = [
         'password',
-        'token',
-        'remember_token',
     ];
 
-    /**
-     * Get the attributes that should be cast.
-     *
-     * @return array<string, string>
-     */
-    protected function casts(): array
+    // mutator untuk atribut password
+    public function setPasswordAttribute($value)
     {
-        return [
-            'password' => 'hashed',
-            'token' => 'hashed',
-            'remember_token' => 'hashed',
-            'is_active' => 'boolean',
-        ];
+        $this->attributes['password'] = Hash::make($value);
+    }
+
+    // relasi ke model UserToken
+    public function tokens(): HasMany
+    {
+        return $this->hasMany(UserToken::class);
     }
 }

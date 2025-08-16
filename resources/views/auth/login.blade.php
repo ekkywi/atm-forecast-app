@@ -41,34 +41,37 @@
                     <div class="card-body p-5">
                         <p class="h5 fw-bold mb-2 text-center">Log In</p>
                         <p class="mb-4 text-muted op-7 fw-normal text-center">Selamat datang kembali !</p>
-                        <div class="row gy-3">
-                            <div class="col-xl-12">
-                                <label class="form-label text-default fw-semibold" for="username">Username</label>
-                                <input class="form-control form-control-lg" id="username" placeholder="username" type="text">
-                            </div>
-                            <div class="col-xl-12 mb-2">
-                                <label class="form-label text-default d-block fw-semibold" for="password">Password<a class="float-end text-danger" href="{{ route("forgot-password") }}">Lupa password ?</a></label>
-                                <div class="input-group">
-                                    <input class="form-control form-control-lg" id="password" placeholder="********" type="password">
-                                    <button class="btn btn-light" id="button-addon2" onclick="createpassword('password',this)" type="button"><i class="ri-eye-off-line align-middle"></i></button>
+                        <form action="#" method="POST">
+                            @csrf
+                            <div class="row gy-3">
+                                <div class="col-xl-12">
+                                    <label class="form-label text-default fw-semibold" for="username">Username</label>
+                                    <input autocomplete="username" class="form-control form-control-lg" id="username" placeholder="username" type="text">
                                 </div>
-                                <div class="mt-2">
-                                    <div class="form-check">
-                                        <input class="form-check-input" id="defaultCheck1" type="checkbox" value="">
-                                        <label class="form-check-label text-muted fw-normal" for="defaultCheck1">
-                                            Ingat saya
-                                        </label>
+                                <div class="col-xl-12 mb-2">
+                                    <label class="form-label text-default d-block fw-semibold" for="password">Password<a class="float-end text-danger" href="{{ route("forgot-password.form") }}">Lupa password ?</a></label>
+                                    <div class="input-group">
+                                        <input autocomplete="current-password" class="form-control form-control-lg" id="password" placeholder="********" type="password">
+                                        <button class="btn btn-light" id="button-addon-password" onclick="createpassword('password',this)" type="button"><i class="ri-eye-off-line align-middle"></i></button>
+                                    </div>
+                                    <div class="mt-2">
+                                        <div class="form-check">
+                                            <input class="form-check-input" id="defaultCheck1" type="checkbox" value="">
+                                            <label class="form-check-label text-muted fw-normal" for="defaultCheck1">
+                                                Ingat saya
+                                            </label>
+                                        </div>
                                     </div>
                                 </div>
+                                <div class="col-xl-12 d-grid mt-2">
+                                    <a class="btn btn-lg btn-primary" href="{{ route("dashboard") }}">Masuk</a>
+                                </div>
                             </div>
-                            <div class="col-xl-12 d-grid mt-2">
-                                <a class="btn btn-lg btn-primary" href="{{ route("dashboard") }}">Masuk</a>
+                            <div class="text-center">
+                                <p class="fs-12 text-muted mt-3">Tidak punya akun? <a class="text-primary" href="{{ route("register.form") }}">Daftar</a></p>
+                                <p class="fs-12 text-muted mt-3">Akun anda belum aktif? <a class="text-primary" href="{{ route("activation.form") }}">Aktivasi Akun</a></p>
                             </div>
-                        </div>
-                        <div class="text-center">
-                            <p class="fs-12 text-muted mt-3">Tidak punya akun? <a class="text-primary" href="{{ route("register") }}">Daftar</a></p>
-                            <p class="fs-12 text-muted mt-3">Akun anda belum aktif? <a class="text-primary" href="{{ route("activation") }}">Aktivasi Akun</a></p>
-                        </div>
+                        </form>
                     </div>
                 </div>
             </div>

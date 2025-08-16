@@ -11,16 +11,15 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('users', function (Blueprint $table) {
+        Schema::create('user_tokens', function (Blueprint $table) {
             $table->uuid('id')->primary();
-            $table->string('name');
-            $table->string('username')->unique();
-            $table->string('position');
-            $table->string('password');
-            $table->string('token', 255)->nullable();
-            $table->boolean('is_active')->default(false);
-            $table->rememberToken();
+            $table->uuid('user_id');
+            $table->string('token', 255)->unique();
+            $table->enum('type', ['activation', 'reset']);
+            $table->boolean('is_used')->default(false);
             $table->timestamps();
+
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
         });
     }
 
@@ -29,6 +28,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('users');
+        Schema::dropIfExists('user_tokens');
     }
 };

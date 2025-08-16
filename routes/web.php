@@ -9,12 +9,17 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/login', [AuthController::class, 'showLoginForm'])->name('login');
+// Form login
+Route::get('/login', [AuthController::class, 'showLoginForm'])->name('login.form');
+// Form registrasi
+Route::get('/register', [AuthController::class, 'showRegisterForm'])->name('register.form');
+// Form lupa password
+Route::get('/forgot-password', [AuthController::class, 'showForgotPasswordForm'])->name('forgot-password.form');
+// Form aktivasi
+Route::get('/activation', [AuthController::class, 'showActivationForm'])->name('activation.form');
 
-Route::get('/register', [AuthController::class, 'showRegisterForm'])->name('register');
-Route::post('/register', [UserController::class, 'store'])->name('register.store');
 
-Route::get('/forgot-password', [AuthController::class, 'showForgotPasswordForm'])->name('forgot-password');
-Route::get('/activation', [AuthController::class, 'showActivationForm'])->name('activation');
+
+
 
 Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
