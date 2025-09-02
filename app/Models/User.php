@@ -3,37 +3,21 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Foundation\Auth\User as Authenticatable;
-use Illuminate\Database\Eloquent\Concerns\HasUuids;
-use Illuminate\Database\Eloquent\Relations\HasMany;
-use Illuminate\Support\Facades\Hash;
 
-use App\Models\UserToken;
-
-class User extends Authenticatable
+class User extends Model
 {
-    use HasUuids;
-
-    public $incrementing = false;
-    protected $keyType = 'string';
-
-    // atribut yang dapat diisi
-    protected $fillable = [
-        'name',
-        'username',
-        'position',
-        'password',
-        'is_active'
-    ];
-
-    // atribut yang disembunyikan
-    protected $hidden = [
-        'password',
-    ];
-
-    // relasi ke model UserToken
-    public function tokens(): HasMany
+    public function sessions()
     {
-        return $this->hasMany(UserToken::class);
+        return $this->hasMany(Session::class);
+    }
+
+    public function positions()
+    {
+        return $this->belongsTo(Position::class);
+    }
+
+    public function roles()
+    {
+        return $this->belongsTo(Role::class);
     }
 }
