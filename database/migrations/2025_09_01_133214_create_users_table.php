@@ -13,8 +13,8 @@ return new class extends Migration
             $table->string('username')->unique();
             $table->string('name');
             $table->string('password');
-            $table->uuid('position_id');
-            $table->uuid('role_id');
+            $table->foreignUuid('position_id')->nullable()->index()->constrained('positions')->onDelete('set null');
+            $table->foreignUuid('role_id')->nullable()->index()->constrained('roles')->onDelete('set null');
             $table->boolean('is_active')->default(false);
             $table->timestamps();
         });
